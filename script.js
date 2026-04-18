@@ -125,40 +125,6 @@ ScrollReveal().reveal('.contact form', { origin: 'bottom' });
 
 
 
-// automiticalll fetch projects from github
-fetch("https://api.github.com/users/Ayush15601/repos")
-.then(res => res.json())
-.then(data => {
-    const container = document.getElementById("github-projects");
-
-    container.innerHTML = ""; // clear existing static items
-
-    data.slice(0, 6).forEach(repo => {
-        const projectBox = document.createElement("div");
-        projectBox.classList.add("projects-box");
-
-        projectBox.innerHTML = `
-            <img src="assets/image.jpg">
-            <div class="projects-info">
-                <h2>${repo.name}</h2>
-                <p>${repo.description || "No description available"}</p>
-                <a href="${repo.html_url}" target="_blank">
-                    <i class="bx bx-link"></i>
-                </a>
-            </div>
-        `;
-
-        container.appendChild(projectBox);
-    });
-})
-
-.catch(err => console.error(err));
-
-
-
-
-
-
 // Form valadition
 const form = document.getElementById("contact-form");
 
