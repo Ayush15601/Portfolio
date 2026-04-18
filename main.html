@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ayush Tewari Portfolio - Web Developer">
+    <meta name="keywords" content="portfolio, web developer, frontend, Ayush Tewari">
+
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+
+<body>
+    
+    <header>
+        <a href="#home" class="logo"> Ayush Tewari <span> </span> </a>
+        <i class="bx bx-moon" id="theme-toggle"></i>
+        <i class="bx bx-menu" id="menu-icon"> </i>
+
+        <nav class="navbar">
+            <a href="#home" class="active"> Home </a>
+            <a href="#about" > About </a>
+            <a href="#projects" > Projects </a>
+            <a href="#skills" > Skills </a>
+            <a href="#contact" > Contact </a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h3> Hi </h3>
+            <h1> It's <span> Ayush </span> </h1>
+            <h3 class="text-animation"> I'm a <span> </span> </h3>
+
+            <div class="social-icon">
+                <a href="https://github.com/Ayush15601" target="_blank"> <i class="bx bxl-github"> </i> </a>
+            </div>
+
+            <a href="assets/cv.pdf" download class="btn">Download Resume</a>
+        </div>
+
+        <div class="home-img">
+            <img src="assets/image.jpg" >
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+        <div class="about-img">
+            <img src="assets/image.jpg">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading"> About <span> me </span></h2>
+            <h3 class="text-animation"> <span> </span></h3>
+            
+             <p> I am a frontend developer and a recent Computer Science graduate <span id="dots">...</span>
+            <span id="more" style="display: none;"> I enjoy creating clean and interactive UI designs and continuously improving my skills by working on real-world projects like my portfolio website and a weather application using API integration. I am focused on writing efficient code and understanding how frontend technologies work together to deliver a smooth user experience. As a fresher, I am eager to start my professional journey and grow in a professional environment </span>
+            </p>
+            
+            <a class="btn" id="readMoreBtn">Read More</a>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading"> Projects </h2>
+
+        <!-- <div class="projects-container" id="github-projects"> </div> -->
+
+        <div class="projects-container">
+            <div class="projects-box">
+                    <img src="assets/weather.png">
+                    <div class="projects-info">
+                        <h2> Wether App </h2>
+                        <p> Fetches and displays real-time weather data using React and API integration </p>
+                        <a href="https://github.com/Ayush15601/Weather-app"> <i class="bx bx-link"> </i> </a>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="skills" id="skills"> 
+        <h2 class="heading"> Skills </h2>
+
+        <div class="skill-bars">
+
+            <div class="bar">
+                <div class="info"> <span> HTML </span> </div>
+                <div class="progress-line html"><span></span></div>
+            </div>
+
+            <div class="bar">
+                <div class="info"> <span> CSS </span> </div>
+                <div class="progress-line css"><span></span></div>
+            </div>
+
+            <div class="bar">
+                <div class="info"> <span> JAVASCRIPT </span> </div>
+                <div class="progress-line javascript"><span></span></div>
+            </div>
+
+            <div class="bar">
+                <div class="info"> <span> REACT </span> </div>
+                <div class="progress-line react"><span></span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading"> Contact <span> Me </span></h2>
+
+        <form id="contact-form" action="https://formspree.io/f/xaqaobbg" method="POST">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" name="name" id="name" required>
+                <input type="email" placeholder="Email" name="email" id="email" required>
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="Phone number" name="phone" id="phone">
+                <input type="text" placeholder="Subject" name="subject" id="subject" required>
+            </div>
+
+            <textarea cols="30" rows="10" placeholder="Your message" name="message" id="message" required></textarea>
+
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+             <a href="https://github.com/Ayush15601" target="_blank"> <i class="bx bxl-github"> </i> </a>
+        </div>
+
+        <p class="copyright">
+            © Ayush Tewari | All Rights Reserved
+        </p>
+    </footer>
+  
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js" defer></script>
+    
+</body>
+</html>
