@@ -219,8 +219,8 @@ span{
 
 @keyframes words{
     0%, 20%{ content: "Frontend Developer";}
-    21%, 40%{content: "Web Developer";}
-    41%, 60%{content: "React Learner";}
+    21%, 40%{content: "React Learner";}
+    41%, 60%{content: "Web Developer";}
     61%, 80%{content: "UI Developer";}
 }
 
