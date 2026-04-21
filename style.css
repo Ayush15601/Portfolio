@@ -9,6 +9,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+:focus {
+  outline: 2px solid var(--main-color);
+}
+
 :root{
     --bg-color: #141414;
     --second-bg-color: #191919;
@@ -22,7 +26,7 @@ body.light-mode{
     --text-color: #111111;
     --main-color: #0077ff;
 }
-
+  
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -37,7 +41,7 @@ body{
 
 header{
     position: fixed;
-    top: left;
+    top: 0;
     left: 0;
     width: 100%;
     padding: 3rem 9%;
@@ -54,6 +58,11 @@ header{
     color: var(--main-color);
     cursor: pointer;
     margin-left: 2rem;
+    transition: 0.3s ease;
+}
+
+#theme-toggle:hover{
+    transform: scale(1.3);
 }
 
 
@@ -111,6 +120,7 @@ span{
     color: var(--main-color);
 }
 
+/* Added blur color on Ayush Tewari */
 .logo span{
     text-shadow: 0 0 25px var(--main-color), 0 0 100px var(--main-color);
 }
@@ -126,22 +136,24 @@ span{
     line-height: 1.3;
 }
 
-.home-img{
-    border-radius: 50%;
 
-}
+/* .home-img{
+    border-radius: 50%;
+    border: 5px solid red;
+
+} */
 
 .home-img img{
-    position: relative;
+    /* position: relative; */
     width: 32vw;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.home-content p{
+/* .home-content p{
     font-size: 1.8rem;
     font-weight: 500;
-}
+} */
 
 .social-icon a{
     display: inline-flex;
@@ -154,7 +166,7 @@ span{
     font-size: 2rem;
     border-radius: 50%;
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 3rem 0 3rem 1.5rem;
     transition: 0.3s ease;
 }
 
@@ -172,7 +184,7 @@ span{
     border-radius: 4rem;
     font-size: 1.6rem;
     color: white;
-    border: 2px solid transparent;
+    /* border: 2px solid transparent; */
     letter-spacing: 0.1rem;
     font-weight: 600;
     transition: 0.3s ease;
@@ -205,10 +217,10 @@ span{
     background-color: var(--bg-color);
     position: absolute;
     width: calc(100% + 8px);
-    height: 100%;
     border-left: 2px solid #333;
+    height: 101%;
     right: -8px;
-    animation:  cursor 0.6s infinite, typing 20s steps(14) infinite;
+    animation: cursor 0.4s infinite, typing 20s steps(40) infinite;
 }
 
 @keyframes cursor{
@@ -218,7 +230,7 @@ span{
 }
 
 @keyframes words{
-    0%, 20%{ content: "Frontend Developer";}
+    0%, 20%{ content: "Fronten Developer";}
     21%, 40%{content: "React Learner";}
     41%, 60%{content: "Web Developer";}
     61%, 80%{content: "UI Developer";}
@@ -229,7 +241,7 @@ span{
         width: 0;
     }
 
-    5%, 20%, 25%, 40%, 45%, 60%, 80%, 85%{
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
         width: calc(100% + 8px);
     }
 }
@@ -239,8 +251,7 @@ span{
     justify-content: center;
     align-items: center;
     gap: 10rem;
-
-background: var(--second-bg-color);
+    background: var(--second-bg-color);
 }
 
 .about-img img{
@@ -269,9 +280,13 @@ background: var(--second-bg-color);
     margin: 2rem 0 3rem;
 }
 
+.about-content span{
+    color: var(--text-color);
+}
+
 .text-animation span{
-    display: inline-block;
-    overflow: hidden;
+    position: relative;
+    /* overflow: hidden; */
 }
 
 .about-content .text-animation span::before{
@@ -280,7 +295,7 @@ background: var(--second-bg-color);
     animation: words 20s infinite;
 }
 
-.about-content.text-animation span::after{
+.about-content .text-animation span::after{
     content: "";
     background-color: var(--second-bg-color);
     position: absolute;
@@ -288,28 +303,29 @@ background: var(--second-bg-color);
     height: 100%;
     border-left: 2px solid #333;
     right: -8px;
-    animation:  cursor 0.6s infinite, typing 20s steps(14) infinite;
+    animation:  cursor 0.6s infinite, typing 20s steps(40) infinite;
 }
 
+/* this psudo code reserve space, its not physical container, its invisible, which tells browser to reserve mentione space (here 10px) for scroll bar in the webpage */
 ::-webkit-scrollbar{
     width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: black;
+    /* width: 50px; */
 }
 
 ::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
 }
 
-::-webkit-scrollbar-track{
-    background-color: black;
-    width: 50px;
-}
-
 .projects{
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .projects h2{
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 }
 
 .projects-container{
@@ -319,53 +335,48 @@ background: var(--second-bg-color);
     gap: 2.5rem;
 }
 
-.projects-container .projects-box{
+/* .projects-container .projects-box{
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    box-shadow: 2rem 3rem 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
-}
+} */
 
 .projects-box img{
     width: 100%;
-    transition: 0.5s ease;
 }
 
-.projects-box:hover img{
-    transform: scale(1.1);
-}
-
-.projects-box:hover img{
-    transform: scale(1.1);
-}
-
-.projects-box{
+/* .projects-box{
     display: flex;
     flex-direction: column;
-}
+} */
 
 .projects-box .projects-info{
-    position: static;
+    /* position: static; */
     text-align: center;
     padding: 1.5rem;
     background: var(--second-bg-color);
 }
 
-.projects-info h4{
+.projects-info h2{
     font-size: 3rem;
-    color: white;
+    color: var(--text-color);
     font-weight: 800;
+    margin-bottom: 4rem;
 }
 
 .projects-info p{
     font-size: 1.6rem;
     margin: 0.3rem 0 1rem;
     font-weight: 600;
+    margin-bottom: 3rem;
 }
 
 .projects-info a{
     color: white;
+    
+    /* anchor tag is inline element, so we used inline-flex to make inside a tag flex thats why its moved in center */
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -373,11 +384,21 @@ background: var(--second-bg-color);
     height: 5rem;
     background: var(--text-color);
     border-radius: 50%;
+    transition: 0.5s ease-in-out;   
 }
 
-.projects-info a i{
+.projects-box:hover a{
+    transform: scale(1.2);
+}
+
+.projects-info  i{
     font-size: 3rem;
     color: var(--main-color);
+    transition: 0.5s ease-in-out;
+}
+
+.projects-box:hover i{
+    transform: scale(1.2);
 }
 
 .skills h2{
@@ -385,12 +406,13 @@ background: var(--second-bg-color);
 }
 
 .skills{
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    background-color: var(--second-bg-color);
 }
 
 .skill-bars{
     padding: 25px 30px;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -418,7 +440,7 @@ background: var(--second-bg-color);
 .skill-bars .bar .progress-line{
     height: 10px;
     width: 100%;
-    background: white;
+    background: var(--text-color);
     position: relative;
     border-radius: 10px;
 }
@@ -427,23 +449,12 @@ background: var(--second-bg-color);
     height: 100%;
     position: absolute;
     border-radius: 10px;
-    background: #0077ff;
-    cursor: pointer;
-}
-
-.bar .progress-line.javascript span{
-    width: 60%;
-    background-color: yellow;
-    box-shadow: 0 0 25px gold;
-    transition: 0.3s ease;
-}
-
-.bar .progress-line.javascript span:hover{
-    box-shadow: 0 0 25px gold , 0 0 50px gold;  
+    /* background: #0077ff; */
+    cursor: pointer; 
 }
 
 .bar .progress-line.html span{
-    width: 90%;
+    width: 80%;
     background-color: greenyellow;
     box-shadow: 0 0 25px greenyellow;
     transition: 0.3s ease;
@@ -454,7 +465,7 @@ background: var(--second-bg-color);
 }
 
 .bar .progress-line.css span{
-    width: 100%;
+    width: 75%;
     background-color: orangered;
     box-shadow: 0 0 25px orangered;
     transition: 0.3s ease;
@@ -464,8 +475,19 @@ background: var(--second-bg-color);
     box-shadow: 0 0 25px orangered , 0 0 50px orangered;  
 }
 
+.bar .progress-line.javascript span{
+    width: 65%;
+    background-color: gold;
+    box-shadow: 0 0 25px gold;
+    transition: 0.3s ease;
+}
+
+.bar .progress-line.javascript span:hover{
+    box-shadow: 0 0 25px gold , 0 0 50px gold;  
+}
+
 .bar .progress-line.react span{
-    width: 90%;
+    width: 50%;
     background-color: purple;
     box-shadow: 0 0 25px purple;
     transition: 0.3s ease;
@@ -476,7 +498,7 @@ background: var(--second-bg-color);
 }
 
 .contact{
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 }
 
 .contact h2{
@@ -501,18 +523,18 @@ background: var(--second-bg-color);
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     border-radius: 0.8rem;
     margin: 1rem 0;
 }
 
 .contact form .btn{
-    margin-top: 2rem;
+    margin: 1rem;
 }
 
 .footer{
-    position: relative;
-    bottom: 0;
+    /* position: relative;
+    bottom: 0; */
     width: 100%;
     padding: 40px 0;
     background-color: var(--main-color);
@@ -521,7 +543,7 @@ background: var(--second-bg-color);
 .footer .social{
     text-align: center;
     padding-bottom: 25px;
-    color: white;
+    /* color: white; */
 }
 
 .footer .social a{
@@ -539,39 +561,6 @@ background: var(--second-bg-color);
 
 .footer .social a:hover{
     transform: scale(1.2)translateY(-10px);
-}
-
-.footer ul{
-    margin-top: 0;
-    padding: 0;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-.footer ul{
-    margin-top: 0;
-    padding: 0;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-.footer ul li a{
-    color: white;
-    border-bottom: 3px solid transparent;
-    transition: 0.3s ease;
-}
-
-.footer ul li a:hover{
-    border-bottom: 3px solid white;
-}
-
-.footer ul li{
-    display: inline-block;
-    padding: 0 15px;
 }
 
 .footer .copyright{
@@ -598,6 +587,12 @@ background: var(--second-bg-color);
 
     .projects{
         padding-bottom: 7rem;
+    }
+
+    .projects .projects-info h2{
+        padding-top: 3rem;
+        height: 7rem;
+        font-size: 22px;
     }
 
     .footer{
@@ -649,6 +644,11 @@ background: var(--second-bg-color);
         margin-top: 4rem;
     }
 
+    .home .text-animation span::before{
+        animation: none;
+        content: "Frontend Developer";
+    }
+
     .about{
         flex-direction: column-reverse;
     }
@@ -657,17 +657,32 @@ background: var(--second-bg-color);
         margin: 1rem 4rem;
     }
 
-    .about img{
-        width: 70vh;
-        margin-top: 1rem; 
-        margin-bottom: 3rem;
+    .about-content h2{
+        font-size: 6rem;
+        margin-top: -70px;
+        margin-bottom: 14px;
     }
 
     .projects h2{
-        margin-bottom: 3rem;
+        margin-top: -4rem;
+        margin-bottom: 6rem;
     }
 
     .projects-container{
         grid-template-columns: repeat(2,1fr);
+    }
+
+    .skills .heading{
+        margin-top: -4rem;
+        margin-bottom: 7rem;
+    }
+    .skills .skill-bars{
+        margin-bottom: 8rem;
+    }
+
+    .contact .heading{
+        margin-top: -8rem;
+        margin-bottom: 4rem;
+        font-size: 6rem;
     }
 }
