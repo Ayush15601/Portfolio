@@ -649,6 +649,10 @@ span{
         content: "Frontend Developer";
     }
 
+    .home .text-animation span::after{
+        display: none;
+    }
+
     .about{
         flex-direction: column-reverse;
     }
