@@ -357,6 +357,10 @@ span{
     text-align: center;
     padding: 1.5rem;
     background: var(--second-bg-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
 }
 
 .projects-info h2{
@@ -387,18 +391,32 @@ span{
     transition: 0.5s ease-in-out;   
 }
 
-.projects-box:hover a{
-    transform: scale(1.2);
-}
-
 .projects-info  i{
     font-size: 3rem;
     color: var(--main-color);
     transition: 0.5s ease-in-out;
 }
 
-.projects-box:hover i{
+.projects-info a:nth-of-type(2):hover{
     transform: scale(1.2);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.live-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.8rem 1.5rem;
+    background: var(--main-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+}
+
+.live-btn:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 15px var(--main-color);
 }
 
 .skills h2{
