@@ -84,31 +84,32 @@ if(themeToggle){
 
 
 
-let menuIcons = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".header-items");
-
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
 
-window.onscroll = function () {
-    let top = window.scrollY;
+addEventListener("scroll", () => {
+
+    let scroll = window.scrollY;
 
     sections.forEach(function (sec) {
-        let offset = sec.offsetTop - 150;
+
+        let top = sec.offsetTop - 150;
         let height = sec.offsetHeight;
+        let bottom = top + height
         let id = sec.getAttribute("id");
 
-        if(top >= offset && top < offset + height){
+        if(scroll >= top && scroll < bottom){
 
             navLinks.forEach( function (link) {link.classList.remove("active")} );
 
             let activeLink = document.querySelector(`header nav a[href*="${id}"]`);
-            if(activeLink){
-                activeLink.classList.add("active");
-            }
+            activeLink.classList.add("active");
         }
     })
-}
+})
+
+let menuIcons = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".header-items");
 
 if(menuIcons && navbar){
     menuIcons.onclick = () => {
