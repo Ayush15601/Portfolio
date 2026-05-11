@@ -862,7 +862,11 @@ section{
 
 @media(max-width: 430px){
     .project-items {
-        width: 75%;
+        width: 80%;
+    }
+
+    .project-items p{
+        font-size: 12px;
     }
 
     .contact-form input:nth-of-type(-n+4), .contact-form textarea{
@@ -872,4 +876,16 @@ section{
     .home-anime{
         font-size: 30px;
     }
+
+    .home-github {
+        width: 8rem;
+        height: 2rem;
+        font-size: 5rem;
+        padding-top: 6px;
+    }
+
+     .project-link a:nth-of-type(-n+2){
+        width: 5rem;
+        padding-right: 8px;
+    } 
 }
