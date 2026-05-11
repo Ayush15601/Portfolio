@@ -1,5 +1,91 @@
+let button = document.querySelector(".about-button");
+let text = document.querySelector(".about-span");
+let dots = document.querySelector(".about-dots");
+
+button.addEventListener("click", () => {
+
+    if(text.style.display === "none"){
+
+        text.style.display = "inline";
+        dots.style.display = "none";
+        button.value = "Read Less";
+    }else{
+
+        text.style.display = "";
+        dots.style.display = "inline";
+        button.value = "Read More";        
+    }
+})
+
+
+
+
+
+let form_button = document.querySelector(".contact-form");
+
+form_button.addEventListener("submit", (e) => {
+    
+    // trim cleans the input by removing spaces, allow uers cant bypass it by adding spaces.
+    // otherwise it reads only once.
+    let email = document.querySelector(".email").value.trim();
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!email.match(emailPattern)){
+        
+        alert("Enter a valid email");
+        
+        // used to prevent browser refreshing when submitting form
+        e.preventDefault();
+        return;
+    }
+
+    alert("Message sent successfully!");
+})
+
+
+
+
+
+
+// Dark-ligh theme
+let themeToggle = document.querySelector("#theme-toggle");
+
+// for saving
+if(themeToggle){
+    if(localStorage.getItem("theme") === "light"){
+        document.body.classList.add("light-mode");
+        themeToggle.classList.remove("bx-moon");
+        themeToggle.classList.add("bx-sun");
+    } else {
+        themeToggle.classList.remove("bx-sun");
+        themeToggle.classList.add("bx-moon");
+    }
+
+    // main
+    themeToggle.addEventListener( "click", () => {
+        document.body.classList.toggle("light-mode");               // toggle means: “Switch between two states.” if class exists → remove it if class does not exist → add it
+
+        if(document.body.classList.contains("light-mode")){
+
+            localStorage.setItem("theme", "light");                 // It stores data in the browser. Here: "theme" -> key  "light" -> value 
+            themeToggle.classList.remove("bx-moon");
+            themeToggle.classList.add("bx-sun");
+        } else {
+
+            localStorage.setItem("theme", "dark");
+            themeToggle.classList.remove("bx-sun");
+            themeToggle.classList.add("bx-moon");
+        }
+    });
+}
+
+
+
+
+
+
 let menuIcons = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".navbar");
+let navbar = document.querySelector(".header-items");
 
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
@@ -40,96 +126,3 @@ navLinks.forEach(link => {
     }
 }
 );
-
-
-
-
-
-
-// Read all
-let btn = document.getElementById("readMoreBtn");
-let dots = document.getElementById("dots");
-let moreText = document.getElementById("more");
-
-if(btn && dots && moreText){
-    let isExpanded = false;
-
-    btn.onclick = () => {
-        isExpanded = !isExpanded;
-
-        dots.style.display = isExpanded ? "none" : "inline";
-        moreText.style.display = isExpanded ? "inline" : "none";
-        btn.innerText = isExpanded ? "Read Less" : "Read More";
-    };
-}
-    
-
-
-
-
-
-// Dark-ligh theme
-let themeToggle = document.querySelector("#theme-toggle");
-
-// load saved theme
-if(themeToggle){
-    if(localStorage.getItem("theme") === "light"){
-        document.body.classList.add("light-mode");
-        themeToggle.classList.remove("bx-moon");
-        themeToggle.classList.add("bx-sun");
-    } else {
-        themeToggle.classList.remove("bx-sun");
-        themeToggle.classList.add("bx-moon");
-    }
-
-    // saved theme
-    themeToggle.onclick = () => {
-        document.body.classList.toggle("light-mode");
-
-        if(document.body.classList.contains("light-mode")){
-            localStorage.setItem("theme", "light");
-            themeToggle.classList.remove("bx-moon");
-            themeToggle.classList.add("bx-sun");
-        } else {
-            localStorage.setItem("theme", "dark");
-            themeToggle.classList.remove("bx-sun");
-            themeToggle.classList.add("bx-moon");
-        }
-    };
-}
-
-
-
-
-
-
-// Form valadition
-const form = document.getElementById("contact-form");
-
-if(form){
-    form.addEventListener("submit", function(e) {
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const subject = document.getElementById("subject").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        // email pattern
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        // empty check
-        if (name === "" || email === "" || subject === "" || message === "") {
-            alert("Please fill all required fields");
-            e.preventDefault();
-            return;
-        }
-
-        // email format check
-        if (!email.match(emailPattern)) {
-            alert("Enter a valid email address");
-            e.preventDefault();
-            return;
-        }
-
-        alert("Message sent successfully!");
-    });
-}

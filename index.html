@@ -1,149 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ayush Tewari Portfolio - Web Developer">
-    <meta name="keywords" content="portfolio, web developer, frontend, Ayush Tewari">
-
-    <title>Ayush Tewari | Frontend Developer</title>
     
-    <link rel="icon" href="./assets/favicon.png">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body>
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://your-website-link.com">
+        <meta property="og:title" content="Ayush Tewari | Frontend Developer Portfolio">
+        <meta property="og:description" content="Check out my latest projects and skills in web development.">
+        <meta property="og:image" content="./assets/portfolio-preview.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:title" content="Ayush Tewari | Frontend Developer">
+        <meta property="twitter:description" content="B.Tech CS graduate & Frontend Developer.">
+
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+        <link rel="icon" href="./assets/favicon.png">
+        
+        <title>Ayush Tewari | Frontend Developer</title>
+    </head>
     
-    <header>
-        <a href="#home" class="logo"> <span> Ayush Tewari </span> </a>
-        <i class="bx bx-moon" id="theme-toggle"></i>
-        <i class="bx bx-menu" id="menu-icon"> </i>
-
-        <nav class="navbar">
-            <a href="#home" class="active"> Home </a>
-            <a href="#about" > About </a>
-            <a href="#projects" > Projects </a>
-            <a href="#skills" > Skills </a>
-            <a href="#contact" > Contact </a>
-        </nav>
-    </header>
-
-    <section class="home" id="home">
-        <div class="home-content">
-
-            <h3> Hi </h3>
-            <h1> It's <span> Ayush </span> </h1>
-            <h3 class="text-animation"> I'm a <span> </span> </h3>
-
-            <div class="social-icon">
-                <a href="https://github.com/Ayush15601" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-github"> </i> </a>
+    <body>
+        <header  class="header">
+            
+            <div class="header-name">
+                <span> Ayush Tewari </span>
             </div>
-
-            <a href="./assets/cv.pdf" download class="btn">Download Resume</a>
-        </div>
-
-        <div class="home-img">
-            <img src="./assets/image.jpg" loading="lazy">
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="./assets/image.jpg" loading="lazy">
-        </div>
-
-        <div class="about-content">
-            <h2 class="heading"> About <span> me </span> </h2>
-            <h3 class="text-animation"> <span> </span> </h3>
             
-             <p> I am a frontend developer and a recent Computer Science graduate <span id="dots">...</span>
-            <span id="more" style="display: none;"> I enjoy creating clean and interactive UI designs and continuously improving my skills by working on real-world projects like my portfolio website and a weather application using API integration. I am focused on writing efficient code and understanding how frontend technologies work together to deliver a smooth user experience. As a fresher, I am eager to start my professional journey and grow in a professional environment </span>
-            </p>
+            <i class="bx bx-moon" id="theme-toggle"></i>
+            <i class="bx bx-menu" id="menu-icon"> </i>
             
-            <button class="btn" id="readMoreBtn">Read More</button>
-        </div>
-    </section>
+            <nav class="header-items">
+                <a href = "#home" class="active"> Home </a>
+                <a href = "#about"> About </a>
+                <a href = "#project"> Projects </a>
+                <a href = "#skill"> Skills </a>
+                <a href = "#contact"> Contacts  </a>
+            </nav>
+        </header>
 
-    <section class="projects" id="projects">
-        <h2 class="heading"> Projects </h2>
 
-        <div class="projects-container">
-            <div class="projects-box">
-                    <img src="./assets/weather.png" loading="lazy">
-                    <div class="projects-info">
-                        <h2> Weather App </h2>
-                        <p> Fetches and displays real-time weather data using React and API integration </p>
+        <section id="home" class = "home">
+            <div class="home-items"> 
+                <h1> Hi </h1>
+                <h1> It's <i class="home-name"> Ayush </i> </h1>
+                <h1> I'm a  <span class="home-anime"> </span> </h1>
+                
+                <!-- noopener:    Prevents the new page from accessing the original page via the window.opener object, prevent js attacks preventing JS attacks like Reverse Tabnabbing, where a malicious site redirects your original tab to a phishing page. noreferrer:     Prevents the browser from sending your website's URL as an HTTP Referer header, hiding your source link from the new site's analytics and server logs. -->
+                <a class="home-github" href="https://github.com/Ayush15601" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-github"> </i> </a>
 
-                        <a href="https://69fa6438c1643f6879788cfa--brilliant-mochi-1f2c8f.netlify.app/" target="_blank" rel="noopener noreferrer" class="live-btn"> <i class="bx bx-link-external"></i> </a>
+                <!-- download attribute with value -->
+                <a class="home-resume" href="./assets/cv.pdf" download="My_resume"> Download resume</a>
+            </div>
+            
+            <div class="home-image-box">
+                <img class="home-image" src="./assets/image.jpg" loading="lazy">
+            </div>
+        </section>
 
-                        <a href="https://github.com/Ayush15601/Weather-app" target="_blank" rel="noopener noreferrer"> <i class="bx bx-link"> </i> </a>
 
+        <section id="about" class = "about">
+            <div>
+                <img class="about-image" src="./assets/image.jpg" loading="lazy">
+            </div>
+            
+            <div class="about-items"> 
+                <h1> About me </h1>
+                <p> I am a B.Tech Computer Science graduate and a passionate Frontend Developer dedicated to crafting immersive and user-friendly web experiences. <span class="about-dots">...</span> <span class="about-span" style="display: none;">  With a strong foundation in HTML, CSS, JavaScript, and React.js, I specialize in transforming complex designs into high-performance, responsive code that works seamlessly across all devices. Beyond just coding, I focus on  writing clean, maintainable logic and optimizing UI/UX for the best possible user journey. I enjoy solving architectural challenges, experimenting with modern web technologies, and staying updated with industry trends to build digital products that are not only functional  but also visually stunning. </span> </p>
+                <input type="button" value="Read More" class="about-button">
+            </div>
+        </section>
+
+        <section id="project" class = "project">
+            <h1> Projects </h1>     
+            
+           <div class="projects">
+                <div class="project-items">
+                    <img src="./assets/weather.png" loading="lazy"> 
+                    <h1> Weather App </h1>
+                    <p> Fetches and displays real-time weather data using React and API integration </p>
+                    
+                    <div class="project-link">
+                        <a href="https://69fa6438c1643f6879788cfa--brilliant-mochi-1f2c8f.netlify.app/" class="project-live" target="_blank" rel="noopener noreferrer"> <i class="bx bx-link"> </i> </a>
+                        <a href="https://github.com/Ayush15601/Weather-app" class="project-github" target="_blank" rel="noopener noreferrer"> <i class="bx bx-link-external"></i> </a>
                     </div>
-            </div>
+                </div>
 
-        </div>
-    </section>
+            </section>
 
-    <section class="skills" id="skills"> 
-        <h2 class="heading"> Skills </h2>
+            <section id="skill" class="skill">
+                <h1> Skills </h1>
 
-        <div class="skill-bars">
+                <div class="skill-container"> 
+                    <div class="skill-items">
 
-            <div class="bar">
-                <div class="info"> <span> HTML </span> </div>
-                <div class="progress-line html"><span> </span></div>
-            </div>
+                        <div class="skill-box">
+                            <i> HTML </i>
+                            <div class="html"> <span> </span> </div>
+                        </div>
+                        
+                        <div class="skill-box">
+                            <i> CSS </i>
+                            <div class="css"> <span> </span> </div>
+                        </div>
+                        
+                        <div class="skill-box">
+                            <i> JAVASCRIPT </i>
+                            <div class="js"> <span> </span> </div>
+                        </div>
+                        
+                        <div class="skill-box">
+                            <i> REACT </i>
+                            <div class="react"> <span> </span> </div>
+                        </div>
+                            
+                    </div>
+                </div>
 
-            <div class="bar">
-                <div class="info"> <span> CSS </span> </div>
-                <div class="progress-line css"><span> </span></div>
-            </div>
+            </section>
 
-            <div class="bar">
-                <div class="info"> <span> JAVASCRIPT </span> </div>
-                <div class="progress-line javascript"><span> </span></div>
-            </div>
+            <section id="contact" class="contact">
+                <h1> Contact <i> ME </i> </h1>
 
-            <div class="bar">
-                <div class="info"> <span> REACT </span> </div>
-                <div class="progress-line react"><span> </span></div>
-            </div>
+                <div class="contact-items">
 
-        </div>
-    </section>
+                    <!-- required attribute -->
+                    <form class="contact-form" action="https://formspree.io/f/xaqaobbg" method="POST">
+                        <input type="text" placeholder="Name" name="name" required>
+                        <input class="email" type="email" placeholder="Email" name="email" required>
 
-    <section class="contact" id="contact">
-        <h2 class="heading"> Contact <span> Me </span></h2>
+                        <!-- new value tel -->
+                        <input type="tel" placeholder="Number" name="number" required>
+                        <input type="text" placeholder="Subject" name="subject" required>
+                        <textarea placeholder="Your Message" name="message" required></textarea>
+                        <input class="btn" type="submit" value="Send Message" required>
+                    </form>
 
-        <form id="contact-form" action="https://formspree.io/f/xaqaobbg" method="POST">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name" name="name" id="name" required>
-                <input type="email" placeholder="Email" name="email" id="email" required>        
-                <input type="tel" placeholder="Phone number" name="phone" id="phone">
-                <input type="text" placeholder="Subject" name="subject" id="subject" required>
-            </div>
+                </div>
+            </section>
 
-            <textarea cols="30" rows="10" placeholder="Your message" name="message" id="message" required></textarea>
+            <footer class="last">
+              <div class="last-items">
+                <a href="https://github.com/Ayush15601" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-github"> </i> </a>
+              </div>
 
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
+                <p> © Ayush Tewari | All Rights Reserved </p>
+            </footer>
 
-    <footer class="footer">
-
-        <div class="social">
-            <a> <i class="bx bxl-github"> </i> </a>
-        </div>
-
-        <p class="copyright">
-            © Ayush Tewari | All Rights Reserved
-        </p>
-    </footer>
-  
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="./script.js" defer></script>
-    
+        <script src="script.js" defer> </script>
 </body>
 </html>
