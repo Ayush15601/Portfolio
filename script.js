@@ -93,7 +93,7 @@ addEventListener("scroll", () => {
 
     sections.forEach(function (sec) {
 
-        let top = sec.offsetTop - 150;
+        let top = sec.offsetTop - 125;
         let height = sec.offsetHeight;
         let bottom = top + height
         let id = sec.getAttribute("id");
@@ -102,7 +102,7 @@ addEventListener("scroll", () => {
 
             navLinks.forEach( function (link) {link.classList.remove("active")} );
 
-            let activeLink = document.querySelector(`header nav a[href*="${id}"]`);
+            let activeLink = document.querySelector(`header nav a[href *= "${id}"]`);
             activeLink.classList.add("active");
         }
     })
@@ -111,19 +111,16 @@ addEventListener("scroll", () => {
 let menuIcons = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".header-items");
 
-if(menuIcons && navbar){
-    menuIcons.onclick = () => {
-        menuIcons.classList.toggle("bx-x");
-        navbar.classList.toggle("active");
-    }
-}
+menuIcons.addEventListener("click", () => {
+    
+    menuIcons.classList.toggle("bx-x");
+    navbar.classList.toggle("active");
+})
 
 navLinks.forEach(link => {
-    link.onclick = () => {
-        if(menuIcons && navbar){
-            menuIcons.classList.remove("bx-x");
-            navbar.classList.remove("active");
-        }
-    }
-}
-);
+
+        link.addEventListener("click", () => {    
+        menuIcons.classList.remove("bx-x");
+        navbar.classList.remove("active");        
+    })
+})
