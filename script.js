@@ -11,7 +11,7 @@ button.addEventListener("click", () => {
         button.value = "Read Less";
     }else{
 
-        text.style.display = "";
+        text.style.display = "none";
         dots.style.display = "inline";
         button.value = "Read More";        
     }
@@ -51,21 +51,24 @@ form_button.addEventListener("submit", (e) => {
 let themeToggle = document.querySelector("#theme-toggle");
 
 // for saving
-if(themeToggle){
-    if(localStorage.getItem("theme") === "light"){
+if(themeToggle){                                                      // its a good practise write it 
+    let item =  localStorage.getItem("theme")                                    
+
+    if(item === "light"){
         document.body.classList.add("light-mode");
         themeToggle.classList.remove("bx-moon");
         themeToggle.classList.add("bx-sun");
     } else {
+        document.body.classList.remove("light-mode");
         themeToggle.classList.remove("bx-sun");
         themeToggle.classList.add("bx-moon");
     }
 
     // main
     themeToggle.addEventListener( "click", () => {
-        document.body.classList.toggle("light-mode");               // toggle means: “Switch between two states.” if class exists → remove it if class does not exist → add it
+        let islight = document.body.classList.toggle("light-mode");               // toggle means: “Switch between two states.” if class exists → remove it if class does not exist → add it
 
-        if(document.body.classList.contains("light-mode")){
+        if(islight){
 
             localStorage.setItem("theme", "light");                 // It stores data in the browser. Here: "theme" -> key  "light" -> value 
             themeToggle.classList.remove("bx-moon");
@@ -93,15 +96,23 @@ addEventListener("scroll", () => {
 
     sections.forEach(function (sec) {
 
+        // offsetTop: distance (in pixels) from the top edge of the element to the top edge of its parent.
         let top = sec.offsetTop - 125;
+
+        // offsrtHeight: total height of the element, including its content, padding, and borders, not margin
         let height = sec.offsetHeight;
         let bottom = top + height
+
+        // getAttribute("id"): method used to return the unique ID of an HTML element as a string. No id return null
         let id = sec.getAttribute("id");
 
         if(scroll >= top && scroll < bottom){
 
-            navLinks.forEach( function (link) {link.classList.remove("active")} );
+            navLinks.forEach( function (link) {
+                link.classList.remove("active")
+            });
 
+            // difference between using *= (contains) and = (exact match) for these links
             let activeLink = document.querySelector(`header nav a[href *= "${id}"]`);
             activeLink.classList.add("active");
         }
