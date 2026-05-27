@@ -283,6 +283,7 @@ section {
     min-height: 27rem;
     width: 28rem;
     border-radius: 50%;
+    box-shadow: 0 0 50px 5px black;
 }
 
 .about-items {
