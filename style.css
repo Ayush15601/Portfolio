@@ -336,11 +336,11 @@ section {
 .projects {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 2rem 4rem;
-    row-gap: 4rem;
-    margin-bottom: 4rem;
+    row-gap: 5rem;
+    column-gap: 11rem;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
 }
 
 .project>h1:nth-of-type(1) {
