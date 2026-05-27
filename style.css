@@ -665,11 +665,12 @@ section {
     #home{
         display: flex;
         flex-direction: column-reverse;
+        min-height: 80rem;
     }
     #menu-icon{
         display: inline;
     }
-
+    
     .header-items.active {
         display: flex;
     }
@@ -688,14 +689,14 @@ section {
     }
 
     .home-image{
-        margin-top: 10rem;
-        margin-bottom: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 5rem
     }
-
+    
     .home-items{
         width: 90%;
     }
-
+    
     .home-resume{
         margin-bottom: 2rem;
     }
@@ -703,9 +704,14 @@ section {
     #about{
         display: flex;
         flex-direction: column-reverse;
+        min-height: 70rem;
     }
 
     #about h1{
+        margin-top: -10rem;
+    }
+    
+    .about-button{
         margin-top: 2rem;
     }
 
@@ -745,324 +751,3 @@ section {
         width: 90%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media(max-width: 1024px) {
-    html {
-        font-size: 70%;
-    }
-
-    .home-github {
-        padding: 4px 0;
-    }
-
-    .home-resume {
-        width: 15rem;
-        min-height: 2.5rem;
-        font-size: 15px;
-        padding: 6px 0;
-    }
-
-    .about-button {
-        width: 11rem;
-        min-height: 2.5rem;
-        font-size: 15px;
-        padding: 5px 0;
-    }
-
-    .btn {
-        width: 11rem;
-        min-height: 2.5rem;
-        font-size: 15px;
-        padding: 5px 0;
-    }
-
-    .project-link a:nth-of-type(1) {
-        padding: 5px;
-    }
-
-    .project-link a:nth-of-type(2) {
-        padding: 5px;
-    }
-
-    .last-items {
-        padding: 3px;
-    }
-
-}
-
-@media(max-width: 768px) {
-    html {
-        font-size: 55%;
-    }
-
-    .header {
-        min-height: 9rem;
-        padding: 0 2rem;
-    }
-
-    .header-name span {
-        margin-left: -3rem;
-    }
-
-    .header-name,
-    #theme-toggle {
-        font-size: 23px;
-    }
-
-    #menu-icon {
-        display: block;
-        font-size: 23px;
-    }
-
-    .header-items.active {
-        display: flex;
-    }
-
-    .header-items {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        background: var(--bg2);
-        padding: 2rem 0;
-        row-gap: 2rem;
-        font-size: 20px;
-    }
-
-    .home {
-        flex-direction: column-reverse;
-        row-gap: 4rem;
-    }
-
-    .home-items {
-        width: 100%;
-        padding: 0 4rem;
-        font-size: large;
-    }
-
-    .home-items h1:nth-of-type(1) {
-        font-size: 50px;
-    }
-
-    .home-items h1:nth-of-type(2) {
-        font-size: 50px;
-    }
-
-    .home-items h1:nth-of-type(3) {
-        font-size: 40px;
-    }
-
-    .home-anime {
-        font-size: 37px;
-        margin-left: 2rem;
-    }
-
-    .home-anime::before {
-        content: "FrontEnd Developer";
-        animation: none;
-    }
-
-    .home-anime::after {
-        animation: none;
-        display: none;
-    }
-
-    .home-github {
-        margin-top: 2rem;
-        padding: 6.8px;
-        min-height: 7rem;
-        width: 7rem;
-        font-size: 5rem;
-    }
-
-    .home-resume {
-        width: 24rem;
-        min-height: 5rem;
-        padding-top: 13px;
-        font-weight: 600;
-        font-size: 15px;
-        margin-top: 1rem;
-        margin-bottom: 8rem;
-    }
-
-    .home-image-box {
-        margin-top: 12rem;
-    }
-
-    .about {
-        display: flex;
-        flex-direction: column-reverse;
-        row-gap: 4rem;
-    }
-
-    .about-items {
-        margin-top: 4rem;
-        width: 100%;
-    }
-
-    .about-items h1 {
-        font-size: 50px;
-        margin-bottom: 2rem;
-    }
-
-    .about-items p,
-    .about-items span {
-        font-size: 16px;
-    }
-
-    .about-button {
-        width: 13rem;
-        min-height: 3rem;
-        font-size: 13px;
-        padding: 4px 0;
-        margin-top: 3rem;
-    }
-
-    .about-image {
-        min-height: 20rem;
-        width: 20rem;
-        margin: 4rem 0;
-    }
-
-    .project>h1:nth-of-type(1) {
-        margin: 6rem 0;
-        font-size: 60px;
-    }
-
-    .project-items {
-        width: 48%;
-        min-height: 45rem;
-        row-gap: 3rem;
-        margin-bottom: 4rem;
-        padding: 1rem;
-    }
-
-    .project-items img {
-        width: 100%;
-    }
-
-    .project-items h1 {
-        font-size: 25px;
-    }
-
-    .project-items p {
-        font-size: 15px;
-    }
-
-    .project-link a:nth-of-type(-n+2) {
-        min-height: 5rem;
-        width: 5rem;
-        font-size: 25px;
-        padding: 8px;
-    }
-
-    .skill {
-        min-height: 55rem;
-    }
-
-    .skill h1 {
-        margin: 5rem 0;
-        font-size: 60px;
-    }
-
-    .skill-container {
-
-        width: 90%;
-        margin-bottom: 15rem;
-    }
-
-    .skill-box i {
-        font-size: 20px;
-    }
-
-    .skill-items {
-        row-gap: 8rem;
-    }
-
-    .skill-box div {
-        width: 100%;
-    }
-
-    .html span {
-        width: 90%;
-    }
-
-    .css span {
-        width: 85%;
-    }
-
-    .js span {
-        width: 75%;
-    }
-
-    .react span {
-        width: 65%;
-    }
-
-    .contact {
-        min-height: 65rem;
-    }
-
-    .contact h1 {
-        font-size: 50px;
-        margin: 4rem 0;
-    }
-
-    .contact-form input:nth-of-type(-n+4),
-    .contact-form textarea {
-        width: 30rem;
-    }
-
-    .btn {
-        width: 17rem;
-        min-height: 3rem;
-        font-size: 15px;
-        padding: 5px 0;
-        margin-top: 2rem;
-    }
-}
-
-@media(max-width: 430px) {
-    .project-items {
-        width: 80%;
-    }
-
-    .project-items p {
-        font-size: 12px;
-    }
-
-    .contact-form input:nth-of-type(-n+4),
-    .contact-form textarea {
-        width: 30rem;
-    }
-
-    .home-anime {
-        font-size: 30px;
-    }
-
-    .home-github {
-        width: 8rem;
-        height: 2rem;
-        font-size: 5rem;
-        padding-top: 6px;
-    }
-
-    .project-link a:nth-of-type(-n+2) {
-        width: 5rem;
-        padding-right: 8px;
-    }
-} */
