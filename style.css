@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,36 +7,43 @@
     border: none;
 }
 
-:root{
+:root {
     --bg: #141414;
     --bg2: #191919;
     --text: white;
-    --main:  #0077ff;
+    --main: #0077ff;
 }
 
-.light-mode{
+.light-mode {
     --bg: #ffffff;
     --bg2: #f5f5f5;
     --text: #111111;
     --main: #0077ff;
 }
 
-html, body{
+html,
+body {
     /* min-height: 100%;                                        this wasted our 6hrs never used otherwise window will not sense scroll*/
     width: 100%;
     background: var(--bg);
     color: var(--text);
-    overflow-x: hidden;                                     /* used to avoid problem in small screen device*/
+
+    /* used to avoid problem in small screen device*/
+    overflow-x: hidden;
     transition: all 0.3s ease;
-    scroll-behavior: smooth;                                /* used to add sroll efect when clicked on nav links*/
+
+    /* used to add sroll efect when clicked on nav links*/
+    scroll-behavior: smooth;
 }
 
-section{
-    scroll-margin-top: 4rem;                                /* Fixed when clicked header links, stop correctly */
+section {
+    /* Fixed when clicked header links, stop correctly */
+    scroll-margin-top: 4rem;
 }
 
-.header{
-    background: rgba(0, 0, 0, 0.8);                       /* 0.8 is the blak color opacity*/
+.header {
+    /* 0.8 is the blak color opacity*/
+    background: rgba(0, 0, 0, 0.8);
     color: var(--main);
     min-height: 7rem;
     width: 100%;
@@ -44,12 +51,14 @@ section{
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
-    backdrop-filter: blur(10px);                            /* used to blur bg below header*/
-    position: fixed;    
-    z-index: 1;                         
+
+    /* used to blur bg below header*/
+    -webkit-webkit-backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 1;
 }
 
-.header-name{
+.header-name {
     font-size: 2rem;
     font-weight: 800;
     text-shadow: 0 0 25px var(--main), 0 0 50px var(--main);
@@ -58,42 +67,44 @@ section{
     transition: 0.3s ease;
 }
 
-.header-name:hover{
+.header-name:hover {
     transform: scale(1.1);
 }
 
-#menu-icon{
+#menu-icon {
     font-size: 2rem;
     color: var(--main);
     cursor: pointer;
     display: none;
 }
 
-#theme-toggle{
+#theme-toggle {
     font-size: 2rem;
     color: var(--main);
     transition: 0.3s ease;
     cursor: pointer;
 }
 
-#theme-toggle:hover{
+#theme-toggle:hover {
     transform: scale(1.2);
 }
 
-.header-items{
+.header-items {
     display: flex;
     column-gap: 4rem;
     font-size: 1rem;
 }
 
-.header-items a{
+.header-items a {
     cursor: pointer;
     text-decoration: none;
     color: white;
-    border-bottom: 3px solid transparent;                   /* used to avoide header links flickring */
+    border-bottom: 3px solid transparent;
+    /* used to avoide header links flickring */
 }
 
-.header-items a:hover, .header-items a.active{
+.header-items a:hover,
+.header-items a.active {
     color: var(--main);
     border-bottom: 3px solid var(--main);
     text-shadow: 0 0 25px var(--main), 0 0 50px var(--main), 0 0 75px var(--main), 0 0 100px var(--main);
@@ -103,7 +114,7 @@ section{
 /* ------------------------------------------------------------------home------------------------------------------------------------------------------------------------ */
 
 
-.home{
+.home {
     background: var(--bg);
     display: flex;
     align-items: center;
@@ -112,32 +123,33 @@ section{
     column-gap: 18rem;
 }
 
-.home-items{
+.home-items {
     color: var(--text);
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
 }
 
-.home h1:nth-of-type(2){                /* target an element based on given position among siblings of the same type.*/
+.home h1:nth-of-type(2) {
+    /* target an element based on given position among siblings of the same type.*/
     font-size: 5rem;
 }
 
-.home-name{
+.home-name {
     color: var(--main);
 }
 
-.home-anime{
+.home-anime {
     position: relative;
     color: var(--main);
 }
 
-.home-anime::before{
+.home-anime::before {
     content: "Frontend Developer";
     animation: words 12s infinite;
 }
 
-.home-anime::after{
+.home-anime::after {
     content: "";
     position: absolute;
     right: -8px;
@@ -149,37 +161,59 @@ section{
     animation: cursor 0.4s infinite, typing 20s steps(70) infinite;
 }
 
-@keyframes cursor{
-    50%{
+@keyframes cursor {
+    50% {
         border-color: transparent;
     }
 }
 
-@keyframes words{
-    0%, 33%{
+@keyframes words {
+
+    0%,
+    33% {
         content: "Frontend Developer";
     }
 
-    34%, 66%{
+    34%,
+    66% {
         content: "Web Developer";
     }
 
-    67%, 100%{
+    67%,
+    100% {
         content: "UI Developer";
     }
 }
 
-@keyframes typing{
-    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{ 
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
         width: 0;
     }
 
-    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
         width: calc(100% + 8px);
     }
 }
 
-.home-github{
+.home-github {
     min-height: 3rem;
     width: 3rem;
     font-size: 2rem;
@@ -193,7 +227,7 @@ section{
     margin-top: 2rem;
 }
 
-.home-resume{
+.home-resume {
     color: var(--text);
     background: var(--main);
     text-decoration: none;
@@ -209,19 +243,19 @@ section{
     box-shadow: 0 0 25px var(--main);
 }
 
-.home-resume:hover{
+.home-resume:hover {
     box-shadow: 0 0 20px var(--main);
     transform: scale(1.1);
 }
 
-.home-github:hover{
+.home-github:hover {
     transform: scale(1) translateY(-10px);
     background: var(--main);
     box-shadow: 0 0 50px var(--main);
     color: var(--text);
 }
 
-.home-image{
+.home-image {
     min-height: 27rem;
     width: 28rem;
     border-radius: 50%;
@@ -232,7 +266,7 @@ section{
 /* ----------------------------------------------------------------about------------------------------------------------------------------------------------------------- */
 
 
-.about{
+.about {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -242,32 +276,32 @@ section{
     color: var(--text);
 }
 
-.about-image{
+.about-image {
     min-height: 27rem;
     width: 28rem;
     border-radius: 50%;
 }
 
-.about-items{
+.about-items {
     width: 50%;
-    min-height: auto;
+    min-height: 1rem;
     padding: 0 4rem;
 }
 
-.about-items h1{
+.about-items h1 {
     font-size: 4rem;
 }
 
-.about-items p{
+.about-items p {
     margin-top: 2rem;
     display: inline-block;
 }
 
-.about-span{
+.about-span {
     display: none;
 }
 
-.about-button{
+.about-button {
     display: block;
     margin-top: 1rem;
     width: 7rem;
@@ -285,7 +319,7 @@ section{
 /* ------------------------------------------------------------------project--------------------------------------------------------------------------------------------- */
 
 
-.project{
+.project {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
@@ -295,23 +329,24 @@ section{
     color: var(--text);
 }
 
-.projects{
+.projects {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 2rem 4rem;
     row-gap: 4rem;
-    margin-bottom: 4rem ;
+    margin-bottom: 4rem;
 }
 
-.project >  h1:nth-of-type(1){                  /* new learning*/
+.project>h1:nth-of-type(1) {
+    /* new learning*/
     text-align: center;
     font-size: 4rem;
     margin: 3rem 0;
 }
 
-.project-items{
+.project-items {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -321,12 +356,12 @@ section{
     row-gap: 1.2rem;
 }
 
-.project-items img{
+.project-items img {
     min-height: 20rem;
     width: 22rem;
 }
 
-.project-link{
+.project-link {
     display: flex;
     justify-content: center;
     column-gap: 1rem;
@@ -334,11 +369,11 @@ section{
 }
 
 
-.project-link a:nth-of-type(1){
+.project-link a:nth-of-type(1) {
     display: inline-block;
     color: var(--main);
     min-height: 3rem;
-    width:  3rem;
+    width: 3rem;
     border-radius: 50%;
     border: 2px solid var(--main);
     text-align: center;
@@ -347,18 +382,18 @@ section{
     transition: 0.3s ease;
 }
 
-.project-link a:nth-of-type(1):hover{
+.project-link a:nth-of-type(1):hover {
     transform: scale(1.2) translateY(-10px);
     background-color: var(--main);
     color: var(--text);
     box-shadow: 0 0 20px var(--main);
 }
 
-.project-link a:nth-of-type(2){
+.project-link a:nth-of-type(2) {
     display: inline-block;
     color: var(--main);
     min-height: 3rem;
-    width:  3rem;
+    width: 3rem;
     border-radius: 50%;
     border: 2px solid var(--main);
     text-align: center;
@@ -367,7 +402,7 @@ section{
     transition: 0.3s ease;
 }
 
-.project-link a:nth-of-type(2):hover{
+.project-link a:nth-of-type(2):hover {
     transform: scale(1.2) translateY(-10px);
     background-color: var(--main);
     color: var(--text);
@@ -378,7 +413,7 @@ section{
 /* ----------------------------------------------------------------skill------------------------------------------------------------------------------------------------ */
 
 
-.skill{
+.skill {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -387,30 +422,30 @@ section{
     row-gap: 2rem;
 }
 
-.skill-container{
+.skill-container {
     background-color: var(--bg);
     width: 70rem;
     min-height: 10rem;
     padding: 20px;
 }
 
-.skill-items{
+.skill-items {
     display: flex;
     flex-direction: column;
-    row-gap: 5rem; 
+    row-gap: 5rem;
 }
 
-.skill-box{
+.skill-box {
     display: flex;
     flex-direction: column;
     row-gap: 0.2rem;
 }
 
-.skill-box i{
+.skill-box i {
     font-size: 1.3rem;
 }
 
-.skill-box div{
+.skill-box div {
     width: 68rem;
     min-height: 0.7rem;
     background-color: var(--text);
@@ -418,12 +453,12 @@ section{
     cursor: pointer;
 }
 
-.skill  h1{
+.skill h1 {
     margin: 2rem 0;
     font-size: 4rem;
 }
 
-.html span{
+.html span {
     display: block;
     width: 60rem;
     min-height: 0.7rem;
@@ -433,11 +468,11 @@ section{
     transition: 0.3s ease;
 }
 
-.html span:hover{
+.html span:hover {
     box-shadow: 0 0 25px gold, 0 0 50px gold;
 }
 
-.css span{
+.css span {
     display: block;
     width: 55rem;
     min-height: 0.7rem;
@@ -448,14 +483,15 @@ section{
     transition: 0.3s ease;
 }
 
-.css span:hover{
-    box-shadow:0 0 25px red, 0 0 50px red;
+.css span:hover {
+    box-shadow: 0 0 25px red, 0 0 50px red;
 }
 
-.js span{
+.js span {
     display: block;
     width: 45rem;
-    min-height: 0.7rem;;
+    min-height: 0.7rem;
+    ;
     background-color: blue;
     box-shadow: 0 0 25px blue;
     border-radius: 10px;
@@ -463,12 +499,12 @@ section{
     transition: 0.3s ease;
 }
 
-.js span:hover{
-    box-shadow:0 0 25px blue, 0 0 50px blue;
-    
+.js span:hover {
+    box-shadow: 0 0 25px blue, 0 0 50px blue;
+
 }
 
-.react span{
+.react span {
     display: block;
     width: 40rem;
     min-height: 0.7rem;
@@ -479,16 +515,16 @@ section{
     transition: 0.3s ease;
 }
 
-.react span:hover{
-    box-shadow:0 0 25px purple, 0 0 50px purple;
-    
+.react span:hover {
+    box-shadow: 0 0 25px purple, 0 0 50px purple;
+
 }
 
 
 /* -----------------------------------------------------------------contact---------------------------------------------------------------------------------------------- */
 
 
-.contact{
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -497,24 +533,24 @@ section{
     row-gap: 2rem;
 }
 
-.contact h1{
+.contact h1 {
     color: var(--text);
     font-size: 5rem;
     margin: 2rem 0;
 }
 
-.contact i{
+.contact i {
     color: var(--main);
 }
 
-.contact-items{
+.contact-items {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 2rem;
 }
 
-.contact-form{
+.contact-form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -522,7 +558,7 @@ section{
     row-gap: 1rem;
 }
 
-.contact-form input:nth-of-type(-n+4){
+.contact-form input:nth-of-type(-n+4) {
     min-height: 3rem;
     width: 48rem;
     padding: 0 5px;
@@ -531,7 +567,7 @@ section{
     color: var(--text);
 }
 
-.contact-form textarea{
+.contact-form textarea {
     min-height: 13rem;
     width: 48rem;
     padding: 5px 5px;
@@ -540,7 +576,7 @@ section{
     color: var(--text);
 }
 
-.btn{
+.btn {
     background-color: var(--main);
     color: var(--text);
     width: 9rem;
@@ -555,12 +591,12 @@ section{
     transition: 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.1);
     box-shadow: 0 0 25px var(--main);
 }
 
-.last{
+.last {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -570,7 +606,7 @@ section{
     min-height: 10rem;
 }
 
-.last-items{
+.last-items {
     min-height: 3rem;
     width: 3rem;
     font-size: 2rem;
@@ -581,105 +617,108 @@ section{
     transition: 0.3s ease;
 }
 
-.last-items i{
+.last-items i {
     color: var(--text);
 }
 
-.last-items:hover{
+.last-items:hover {
     transform: scale(1) translateY(-10px);
 }
 
-.last p{
+.last p {
     margin: 10px 0;
 }
 
-::-webkit-scrollbar{
+/* ---------------------------------------------------------------scroll-bar--------------------------------------------------------------------------------------------- */
+
+::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: black;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: var(--main);
 }
 
 /* ---------------------------------------------------------------media queries------------------------------------------------------------------------------------------ */
 
 
-@media(max-width: 1024px){
-    html{
+@media(max-width: 1024px) {
+    html {
         font-size: 70%;
     }
 
-    .home-github{
+    .home-github {
         padding: 4px 0;
     }
 
-    .home-resume{
+    .home-resume {
         width: 15rem;
         min-height: 2.5rem;
         font-size: 15px;
         padding: 6px 0;
     }
-    
-    .about-button{
-        width: 11rem;
-        min-height: 2.5rem;
-        font-size: 15px;
-        padding: 5px 0;
-    }
-    
-    .btn{
+
+    .about-button {
         width: 11rem;
         min-height: 2.5rem;
         font-size: 15px;
         padding: 5px 0;
     }
 
-    .project-link a:nth-of-type(1){
+    .btn {
+        width: 11rem;
+        min-height: 2.5rem;
+        font-size: 15px;
+        padding: 5px 0;
+    }
+
+    .project-link a:nth-of-type(1) {
         padding: 5px;
     }
 
-    .project-link a:nth-of-type(2){
+    .project-link a:nth-of-type(2) {
         padding: 5px;
     }
 
-    .last-items{
+    .last-items {
         padding: 3px;
     }
-        
+
 }
 
-@media(max-width: 768px){
-    html{
+@media(max-width: 768px) {
+    html {
         font-size: 55%;
     }
-    
-    .header{
+
+    .header {
         min-height: 9rem;
         padding: 0 2rem;
     }
 
-    .header-name span{
+    .header-name span {
         margin-left: -3rem;
     }
 
-    .header-name, #theme-toggle{
+    .header-name,
+    #theme-toggle {
         font-size: 23px;
     }
-    
-    #menu-icon{
+
+    #menu-icon {
         display: block;
         font-size: 23px;
     }
 
-    .header-items.active{
+    .header-items.active {
         display: flex;
     }
 
-    .header-items{
+    .header-items {
         display: none;
         flex-direction: column;
         align-items: flex-start;
@@ -692,40 +731,40 @@ section{
         font-size: 20px;
     }
 
-    .home{
+    .home {
         flex-direction: column-reverse;
         row-gap: 4rem;
     }
 
-    .home-items{
+    .home-items {
         width: 100%;
         padding: 0 4rem;
         font-size: large;
     }
 
-    .home-items h1:nth-of-type(1){
+    .home-items h1:nth-of-type(1) {
         font-size: 50px;
     }
 
-    .home-items h1:nth-of-type(2){
+    .home-items h1:nth-of-type(2) {
         font-size: 50px;
     }
 
-    .home-items h1:nth-of-type(3){
+    .home-items h1:nth-of-type(3) {
         font-size: 40px;
     }
 
-    .home-anime{
+    .home-anime {
         font-size: 37px;
         margin-left: 2rem;
     }
 
-    .home-anime::before{
+    .home-anime::before {
         content: "FrontEnd Developer";
         animation: none;
     }
 
-    .home-anime::after{
+    .home-anime::after {
         animation: none;
         display: none;
     }
@@ -748,31 +787,32 @@ section{
         margin-bottom: 8rem;
     }
 
-    .home-image-box{
+    .home-image-box {
         margin-top: 12rem;
     }
 
-    .about{
+    .about {
         display: flex;
         flex-direction: column-reverse;
         row-gap: 4rem;
     }
-    
-    .about-items{
+
+    .about-items {
         margin-top: 4rem;
         width: 100%;
     }
-    
-    .about-items h1{
+
+    .about-items h1 {
         font-size: 50px;
         margin-bottom: 2rem;
     }
-    
-    .about-items p, .about-items span{
+
+    .about-items p,
+    .about-items span {
         font-size: 16px;
     }
 
-    .about-button{
+    .about-button {
         width: 13rem;
         min-height: 3rem;
         font-size: 13px;
@@ -780,13 +820,13 @@ section{
         margin-top: 3rem;
     }
 
-    .about-image{
+    .about-image {
         min-height: 20rem;
-        width: 20rem ;
+        width: 20rem;
         margin: 4rem 0;
     }
 
-    .project > h1:nth-of-type(1){
+    .project>h1:nth-of-type(1) {
         margin: 6rem 0;
         font-size: 60px;
     }
@@ -799,82 +839,83 @@ section{
         padding: 1rem;
     }
 
-    .project-items img{
+    .project-items img {
         width: 100%;
     }
 
-    .project-items h1{
+    .project-items h1 {
         font-size: 25px;
     }
 
-    .project-items p{
+    .project-items p {
         font-size: 15px;
     }
 
-    .project-link a:nth-of-type(-n+2){
+    .project-link a:nth-of-type(-n+2) {
         min-height: 5rem;
         width: 5rem;
         font-size: 25px;
         padding: 8px;
-    } 
+    }
 
-    .skill{
+    .skill {
         min-height: 55rem;
     }
-    
-    .skill h1{
+
+    .skill h1 {
         margin: 5rem 0;
         font-size: 60px;
     }
-    
-    .skill-container{
+
+    .skill-container {
 
         width: 90%;
         margin-bottom: 15rem;
     }
 
-    .skill-box i{
+    .skill-box i {
         font-size: 20px;
     }
 
-    .skill-items{
+    .skill-items {
         row-gap: 8rem;
     }
 
-    .skill-box div{
+    .skill-box div {
         width: 100%;
     }
 
-    .html span{ 
-        width: 90%; 
+    .html span {
+        width: 90%;
     }
 
-    .css span{
-         width: 85%; 
-    }
-    
-    .js span{ 
-        width: 75%; 
-    }
-    
-    .react span{ 
-    width: 65%; 
+    .css span {
+        width: 85%;
     }
 
-    .contact{
+    .js span {
+        width: 75%;
+    }
+
+    .react span {
+        width: 65%;
+    }
+
+    .contact {
         min-height: 65rem;
     }
-    
-    .contact h1{
+
+    .contact h1 {
         font-size: 50px;
         margin: 4rem 0;
     }
 
-    .contact-form input:nth-of-type(-n+4), .contact-form textarea{
+    .contact-form input:nth-of-type(-n+4),
+    .contact-form textarea {
         width: 30rem;
     }
 
-    .btn{
+    .btn {
         width: 17rem;
         min-height: 3rem;
         font-size: 15px;
@@ -883,20 +924,21 @@ section{
     }
 }
 
-@media(max-width: 430px){
+@media(max-width: 430px) {
     .project-items {
         width: 80%;
     }
 
-    .project-items p{
+    .project-items p {
         font-size: 12px;
     }
 
-    .contact-form input:nth-of-type(-n+4), .contact-form textarea{
+    .contact-form input:nth-of-type(-n+4),
+    .contact-form textarea {
         width: 30rem;
     }
 
-    .home-anime{
+    .home-anime {
         font-size: 30px;
     }
 
@@ -907,8 +949,8 @@ section{
         padding-top: 6px;
     }
 
-     .project-link a:nth-of-type(-n+2){
+    .project-link a:nth-of-type(-n+2) {
         width: 5rem;
         padding-right: 8px;
-    } 
+    }
 }
