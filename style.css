@@ -687,6 +687,7 @@ section {
 
     .home-image{
         margin-top: 10rem;
+        margin-bottom: 2rem;
     }
 
     .home-items{
@@ -697,6 +698,22 @@ section {
         margin-bottom: 2rem;
     }
     
+    #about{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #about h1{
+        margin-top: 2rem;
+    }
+
+    .about-items{
+        width: 100%;
+    }
+
+    .about-image{
+        margin: 2rem 0;
+    }
 }
 
 
