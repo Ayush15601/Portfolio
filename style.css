@@ -714,6 +714,30 @@ section {
     .about-image{
         margin: 2rem 0;
     }
+
+    .skill-container{
+        width: 90%;
+    } 
+    
+    .skill-box div{
+        width: 100%;
+    }
+    
+    .html span{
+        width: 85%
+    }
+    
+    .css span{
+        width: 75%;
+    }
+    
+    .js span{
+        width: 65%;    
+    }
+    
+    .react span{
+        width: 60%;
+    }
 }
 
 
