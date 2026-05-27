@@ -214,30 +214,41 @@ section {
 }
 
 .home-github {
-    min-height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
     width: 3rem;
     font-size: 2rem;
     border-radius: 50%;
     border: 2px solid var(--main);
-    text-align: center;
     color: var(--main);
-    padding-top: 7px;
-    transition: 0.3s ease;
     margin-left: 3.4rem;
     margin-top: 2rem;
+    transition: 0.3s ease;
+}
+
+.home-github:hover {
+    transform: scale(1) translateY(-10px);
+    background: var(--main);
+    box-shadow: 0 0 50px var(--main);
+    color: var(--text);
 }
 
 .home-resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--text);
     background: var(--main);
     text-decoration: none;
-    width: 14rem;
-    min-height: 2.5rem;
+    max-width: 14rem;
+    width: 100%;
+    height: 2.5rem;
     border-radius: 3rem;
-    font-size: 18px;
-    padding-top: 10px;
+    font-size: clamp(13px, 1.3vw, 20px);
     font-weight: bold;
-    text-align: center;
     transition: 0.3s ease;
     letter-spacing: 0.6px;
     box-shadow: 0 0 25px var(--main);
@@ -246,13 +257,6 @@ section {
 .home-resume:hover {
     box-shadow: 0 0 20px var(--main);
     transform: scale(1.1);
-}
-
-.home-github:hover {
-    transform: scale(1) translateY(-10px);
-    background: var(--main);
-    box-shadow: 0 0 50px var(--main);
-    color: var(--text);
 }
 
 .home-image {
@@ -306,6 +310,7 @@ section {
     margin-top: 1rem;
     width: 7rem;
     min-height: 2rem;
+    font-size: clamp(11px, 1.2vw, 16px);
     letter-spacing: 0.6px;
     font-weight: 600;
     border-radius: 20px;
@@ -370,14 +375,14 @@ section {
 
 
 .project-link a:nth-of-type(1) {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--main);
-    min-height: 3rem;
+    height: 3rem;
     width: 3rem;
     border-radius: 50%;
     border: 2px solid var(--main);
-    text-align: center;
-    padding-top: 7px;
     font-size: 1.7rem;
     transition: 0.3s ease;
 }
@@ -390,14 +395,14 @@ section {
 }
 
 .project-link a:nth-of-type(2) {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--main);
-    min-height: 3rem;
+    height: 3rem;
     width: 3rem;
     border-radius: 50%;
     border: 2px solid var(--main);
-    text-align: center;
-    padding-top: 7px;
     font-size: 1.7rem;
     transition: 0.3s ease;
 }
@@ -507,7 +512,7 @@ section {
 .react span {
     display: block;
     width: 40rem;
-    min-height: 0.7rem;
+    height: 0.7rem;
     background-color: purple;
     box-shadow: 0 0 25px purple;
     border-radius: 10px;
@@ -603,17 +608,18 @@ section {
     row-gap: 2rem;
     align-items: center;
     background-color: var(--main);
-    min-height: 10rem;
+    height: 10rem;
 }
 
 .last-items {
-    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
     width: 3rem;
     font-size: 2rem;
     border-radius: 50%;
     border: 2px solid var(--text);
-    text-align: center;
-    padding-top: 7px;
     transition: 0.3s ease;
 }
 
@@ -645,8 +651,26 @@ section {
 
 /* ---------------------------------------------------------------media queries------------------------------------------------------------------------------------------ */
 
-
 @media(max-width: 1024px) {
+    html {
+        font-size: 70%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media(max-width: 1024px) {
     html {
         font-size: 70%;
     }
@@ -953,4 +977,4 @@ section {
         width: 5rem;
         padding-right: 8px;
     }
-}
+} */
