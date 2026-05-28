@@ -373,7 +373,6 @@ section {
     margin-bottom: 2rem;
 }
 
-
 .project-link a:nth-of-type(1) {
     display: flex;
     justify-content: center;
@@ -636,7 +635,9 @@ section {
     margin: 10px 0;
 }
 
+
 /* ---------------------------------------------------------------scroll-bar--------------------------------------------------------------------------------------------- */
+
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -650,7 +651,9 @@ section {
     background-color: var(--main);
 }
 
+
 /* ---------------------------------------------------------------media queries------------------------------------------------------------------------------------------ */
+
 
 @media(max-width: 1024px) {
     html {
@@ -750,5 +753,9 @@ section {
 
     .contact-form, .contact-items{
         width: 90%;
+    }
+
+    #project{
+        min-height: 55rem;
     }
 }
