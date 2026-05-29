@@ -129,8 +129,8 @@ section {
     row-gap: 1.5rem;
 }
 
+/* target an element based on given position among siblings of the same type.*/
 .home h1:nth-of-type(2) {
-    /* target an element based on given position among siblings of the same type.*/
     font-size: 5rem;
 }
 
@@ -344,8 +344,8 @@ section {
     padding-bottom: 3rem;
 }
 
+/* new learning*/
 .project>h1:nth-of-type(1) {
-    /* new learning*/
     text-align: center;
     font-size: 4rem;
     margin: 3rem 0;
