@@ -17,8 +17,10 @@ button.addEventListener("click", () => {
 let form_button = document.querySelector(".contact-form");
 
 form_button.addEventListener("submit", (e) => {
+
   // trim cleans the input by removing spaces, allow uers cant bypass it by adding spaces.
-  // otherwise it reads only once.
+
+  // put these two variable inside submit event listiner otherwise it reads only once.
   let email = document.querySelector(".email").value.trim();
   let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -38,6 +40,7 @@ let themeToggle = document.querySelector("#theme-toggle");
 
 // for saving
 if (themeToggle) {
+  
   // its a good practise write it
   let item = localStorage.getItem("theme");
 

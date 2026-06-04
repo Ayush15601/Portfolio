@@ -1,161 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Ayush Tewari Portfolio - Web Developer">
-        <meta name="keywords" content="portfolio, web developer, frontend, Ayush Tewari">
 
-        
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-        <link rel="icon" href="./assets/favicon.png">
-        
-        <title>Ayush Tewari | Frontend Developer</title>
-    </head>
-    
-    <body>
-        <header  class="header">
-            
-            <div class="header-name">
-                <span> Ayush Tewari </span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ayush Tewari Portfolio - Web Developer">
+    <meta name="keywords" content="portfolio, web developer, frontend, Ayush Tewari">
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="icon" href="./assets/favicon.png">
+
+    <title>Ayush Tewari | Frontend Developer</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header-name">
+            <span> Ayush Tewari </span>
+        </div>
+
+        <i class="bx bx-moon" id="theme-toggle"></i>
+        <i class="bx bx-menu" id="menu-icon"> </i>
+
+        <nav class="header-items">
+            <a href="#home" class="active"> Home </a>
+            <a href="#about"> About </a>
+            <a href="#project"> Projects </a>
+            <a href="#skill"> Skills </a>
+            <a href="#contact"> Contacts </a>
+        </nav>
+    </header>
+
+
+    <section id="home" class="home">
+        <div class="home-items">
+            <h1> Hi </h1>
+            <h1> It's <i class="home-name"> Ayush </i> </h1>
+            <h1> I'm a <span class="home-anime"> </span> </h1>
+
+            <!-- noopener:    Prevents the new page from accessing the original page via the window.opener object, prevent js attacks like Reverse Tabnabbing, where a malicious site redirects your original tab to a phishing page.   noreferrer:   Prevents the browser from sending your website's URL as an HTTP Referer header, hiding your source link from the new site's analytics and server logs. -->
+            <a class="home-github" title="visit our github profile" href="https://github.com/Ayush15601" target="_blank"
+                rel="noopener noreferrer"> <i class="bx bxl-github"> </i> </a>
+
+            <!-- download attribute with value -->
+            <a class="home-resume" href="./assets/cv.pdf" download="My_resume"> Download resume</a>
+        </div>
+
+        <div class="home-image-box">
+            <img class="home-image" src="./assets/image.jpg" alt="profile pic" loading="lazy">
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div>
+            <img class="about-image" src="./assets/image.jpg" alt="profile pic" loading="lazy">
+        </div>
+
+        <div class="about-items">
+            <h1> About me </h1>
+            <p> I am a B.Tech Computer Science graduate and a passionate Frontend Developer dedicated to crafting
+                immersive and user-friendly web experiences. <span class="about-dots">...</span> <span
+                    class="about-span"> With a strong foundation in HTML, CSS, JavaScript, and React.js, I specialize in
+                    transforming complex designs into high-performance, responsive code that works seamlessly across all
+                    devices. Beyond just coding, I focus on writing clean, maintainable logic and optimizing UI/UX for
+                    the best possible user journey. I enjoy solving architectural challenges, experimenting with modern
+                    web technologies, and staying updated with industry trends to build digital products that are not
+                    only functional but also visually stunning. </span> </p>
+            <input type="button" value="Read More" class="about-button">
+        </div>
+    </section>
+
+    <section id="project" class="project">
+        <h1> Projects </h1>
+
+        <div class="projects">
+
+            <div class="project-items">
+                <img src="./assets/weather.png" alt="weather app" loading="lazy">
+                <h1> Weather App </h1>
+                <p> Fetches and displays real-time weather data using React and API integration </p>
+
+                <div class="project-link">
+                    <a title="launch the live weather app demo" href="#" class="project-live" target="_blank"
+                        rel="noopener noreferrer"> <i class="bx bx-link"> </i> </a>
+                    <a title="view weather app repo" href="https://github.com/Ayush15601/Weather-app"
+                        class="project-github" target="_blank" rel="noopener noreferrer"> <i
+                            class="bx bx-link-external"></i> </a>
+                </div>
             </div>
-            
-            <i class="bx bx-moon" id="theme-toggle"></i>
-            <i class="bx bx-menu" id="menu-icon"> </i>
-            
-            <nav class="header-items">
-                <a href = "#home" class="active"> Home </a>
-                <a href = "#about"> About </a>
-                <a href = "#project"> Projects </a>
-                <a href = "#skill"> Skills </a>
-                <a href = "#contact"> Contacts  </a>
-            </nav>
-        </header>
 
+            <div class="project-items">
+                <img src="./assets/movie.png" alt="movie search engine app" loading="lazy">
+                <h1> Movie Search engine app </h1>
+                <p> Fetches and displays movie data using React and TMDB API integration </p>
 
-        <section id="home" class = "home">
-            <div class="home-items"> 
-                <h1> Hi </h1>
-                <h1> It's <i class="home-name"> Ayush </i> </h1>
-                <h1> I'm a  <span class="home-anime"> </span> </h1>
-                
-                <!-- noopener:    Prevents the new page from accessing the original page via the window.opener object, prevent js attacks like Reverse Tabnabbing, where a malicious site redirects your original tab to a phishing page.   noreferrer:   Prevents the browser from sending your website's URL as an HTTP Referer header, hiding your source link from the new site's analytics and server logs. -->
-                <a class="home-github" title="visit our github profile" href="https://github.com/Ayush15601" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-github"> </i> </a>
-
-                <!-- download attribute with value -->
-                <a class="home-resume" href="./assets/cv.pdf" download="My_resume"> Download resume</a>
+                <div class="project-link">
+                    <a title="launch the live weather app demo" href="#" class="project-live" target="_blank"
+                        rel="noopener noreferrer"> <i class="bx bx-link"> </i> </a>
+                    <a title="view movie app repo" href="https://github.com/Ayush15601/Movie_search_engine"
+                        class="project-github" target="_blank" rel="noopener noreferrer"> <i
+                            class="bx bx-link-external"></i> </a>
+                </div>
             </div>
-            
-            <div class="home-image-box">
-                <img class="home-image" src="./assets/image.jpg" alt="profile pic" loading="lazy">
-            </div>
-        </section>
 
+        </div>
 
-        <section id="about" class = "about">
-            <div>
-                <img class="about-image" src="./assets/image.jpg" alt="profile pic" loading="lazy">
-            </div>
-            
-            <div class="about-items"> 
-                <h1> About me </h1>
-                <p> I am a B.Tech Computer Science graduate and a passionate Frontend Developer dedicated to crafting immersive and user-friendly web experiences. <span class="about-dots">...</span> <span class="about-span">  With a strong foundation in HTML, CSS, JavaScript, and React.js, I specialize in transforming complex designs into high-performance, responsive code that works seamlessly across all devices. Beyond just coding, I focus on  writing clean, maintainable logic and optimizing UI/UX for the best possible user journey. I enjoy solving architectural challenges, experimenting with modern web technologies, and staying updated with industry trends to build digital products that are not only functional  but also visually stunning. </span> </p>
-                <input type="button" value="Read More" class="about-button">
-            </div>
-        </section>
+    </section>
 
-        <section id="project" class = "project">
-            <h1> Projects </h1>     
-            
-           <div class="projects">
-                
-                <div class="project-items">
-                    <img src="./assets/weather.png" alt="weather app" loading="lazy"> 
-                    <h1> Weather App </h1>
-                    <p> Fetches and displays real-time weather data using React and API integration </p>
-                    
-                    <div class="project-link">
-                        <a title="launch the live weather app demo" href="#" class="project-live" target="_blank" rel="noopener noreferrer"> <i class="bx bx-link"> </i> </a>
-                        <a title="view weather app repo" href="https://github.com/Ayush15601/Weather-app" class="project-github" target="_blank" rel="noopener noreferrer"> <i class="bx bx-link-external"></i> </a>
-                    </div>
+    <section id="skill" class="skill">
+        <h1> Skills </h1>
+
+        <div class="skill-container">
+            <div class="skill-items">
+
+                <div class="skill-box">
+                    <i> HTML </i>
+                    <div class="html"> <span> </span> </div>
                 </div>
 
-                <div class="project-items">
-                   <img src="./assets/movie.png" alt="movie search engine app" loading="lazy"> 
-                    <h1> Movie Search engine app </h1>
-                    <p> Fetches and displays movie data using React and TMDB API integration </p>
-                    
-                    <div class="project-link">
-                        <a title="launch the live weather app demo" href="#" class="project-live" target="_blank" rel="noopener noreferrer"> <i class="bx bx-link"> </i> </a>
-                        <a title="view movie app repo" href="https://github.com/Ayush15601/Movie_search_engine" class="project-github" target="_blank" rel="noopener noreferrer"> <i class="bx bx-link-external"></i> </a>
-                    </div>
+                <div class="skill-box">
+                    <i> CSS </i>
+                    <div class="css"> <span> </span> </div>
+                </div>
+
+                <div class="skill-box">
+                    <i> JAVASCRIPT </i>
+                    <div class="js"> <span> </span> </div>
+                </div>
+
+                <div class="skill-box">
+                    <i> REACT </i>
+                    <div class="react"> <span> </span> </div>
                 </div>
 
             </div>
+        </div>
 
-            </section>
+    </section>
 
-            <section id="skill" class="skill">
-                <h1> Skills </h1>
+    <section id="contact" class="contact">
+        <h1> Contact <i> ME </i> </h1>
 
-                <div class="skill-container"> 
-                    <div class="skill-items">
+        <div class="contact-items">
 
-                        <div class="skill-box">
-                            <i> HTML </i>
-                            <div class="html"> <span> </span> </div>
-                        </div>
-                        
-                        <div class="skill-box">
-                            <i> CSS </i>
-                            <div class="css"> <span> </span> </div>
-                        </div>
-                        
-                        <div class="skill-box">
-                            <i> JAVASCRIPT </i>
-                            <div class="js"> <span> </span> </div>
-                        </div>
-                        
-                        <div class="skill-box">
-                            <i> REACT </i>
-                            <div class="react"> <span> </span> </div>
-                        </div>
-                            
-                    </div>
-                </div>
+            <!-- required attribute -->
+            <form class="contact-form" action="https://formspree.io/f/xaqaobbg" method="POST">
+                <input type="text" placeholder="Name" name="name" required>
+                <input class="email" type="email" placeholder="Email" name="email" required>
 
-            </section>
+                <!-- new value tel -->
+                <input type="tel" placeholder="Number" name="number" required>
+                <input type="text" placeholder="Subject" name="subject" required>
+                <textarea placeholder="Your Message" name="message" required></textarea>
+                <input class="btn" type="submit" value="Send Message" required>
+            </form>
 
-            <section id="contact" class="contact">
-                <h1> Contact <i> ME </i> </h1>
+        </div>
+    </section>
 
-                <div class="contact-items">
+    <footer class="last">
+        <div class="last-items">
+            <a title="visit our github profile" href="https://github.com/Ayush15601" target="_blank"
+                rel="noopener noreferrer"> <i class="bx bxl-github"> </i> </a>
+        </div>
 
-                    <!-- required attribute -->
-                    <form class="contact-form" action="https://formspree.io/f/xaqaobbg" method="POST">
-                        <input type="text" placeholder="Name" name="name" required>
-                        <input class="email" type="email" placeholder="Email" name="email" required>
+        <p> © Ayush Tewari | All Rights Reserved </p>
+    </footer>
 
-                        <!-- new value tel -->
-                        <input type="tel" placeholder="Number" name="number" required>
-                        <input type="text" placeholder="Subject" name="subject" required>
-                        <textarea placeholder="Your Message" name="message" required></textarea>
-                        <input class="btn" type="submit" value="Send Message" required>
-                    </form>
-
-                </div>
-            </section>
-
-            <footer class="last">
-              <div class="last-items">
-                <a title="visit our github profile" href="https://github.com/Ayush15601" target="_blank" rel="noopener noreferrer"> <i class="bx bxl-github"> </i> </a>
-              </div>
-
-                <p> © Ayush Tewari | All Rights Reserved </p>
-            </footer>
-
-        <script src="script.js" defer> </script>
+    <!-- differ vs async -->
+    <script src="script.js" defer> </script>
 </body>
+
 </html>
