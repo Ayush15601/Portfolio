@@ -95,6 +95,12 @@ In addition to this portfolio, check out some of my key projects:
 
 ---
 
+## 👤 Author
+
+* **Ayush**
+
+---
+
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
