@@ -279,11 +279,18 @@ section {
     color: var(--text);
 }
 
-.about-image {
-    min-height: 27rem;
-    width: 28rem;
+.image_container {
+    min-height: 19rem;
+    width: 20rem;
     border-radius: 50%;
-    box-shadow: 0 0 50px 5px black;
+    background-color: white;
+}
+
+.about-image {
+    min-height: 19rem;
+    width: 20rem;
+    border-radius: 50%;
+    box-shadow: 0 0 50px white;
 }
 
 .about-items {
@@ -538,7 +545,7 @@ section {
 
 .contact h1 {
     color: var(--text);
-    font-size: clamp( 30px, 6vw, 200px);
+    font-size: clamp(30px, 6vw, 200px);
     margin: 2rem 0;
 }
 
@@ -666,15 +673,16 @@ section {
         font-size: 70%;
     }
 
-    #home{
+    #home {
         display: flex;
         flex-direction: column-reverse;
         min-height: 80rem;
     }
-    #menu-icon{
+
+    #menu-icon {
         display: inline;
     }
-    
+
     .header-items.active {
         display: flex;
     }
@@ -692,70 +700,71 @@ section {
         font-size: 20px;
     }
 
-    .home-image{
+    .home-image {
         margin-top: 1rem;
         margin-bottom: 5rem
     }
-    
-    .home-items{
+
+    .home-items {
         width: 90%;
     }
-    
-    .home-resume{
+
+    .home-resume {
         margin-bottom: 2rem;
     }
-    
-    #about{
+
+    #about {
         display: flex;
         flex-direction: column-reverse;
         min-height: 70rem;
     }
 
-    #about h1{
-        margin-top: -10rem;
+    #about h1 {
+        margin-top: 0;
     }
-    
-    .about-button{
+
+    .about-button {
         margin-top: 2rem;
     }
 
-    .about-items{
+    .about-items {
         width: 100%;
     }
 
-    .about-image{
-        margin: 2rem 0;
+    .about-image {
+        margin: 11rem 0;
     }
 
-    .skill-container{
+    .skill-container {
         width: 90%;
-    } 
-    
-    .skill-box div{
+    }
+
+    .skill-box div {
         width: 100%;
     }
-    
-    .html span{
+
+    .html span {
         width: 85%
     }
-    
-    .css span{
+
+    .css span {
         width: 75%;
     }
-    
-    .js span{
-        width: 65%;    
+
+    .js span {
+        width: 65%;
     }
-    
-    .react span{
+
+    .react span {
         width: 60%;
     }
 
-    .contact-form, .contact-items{
+    .contact-form,
+    .contact-items {
         width: 90%;
     }
 
-    #project{
+    #project {
         min-height: 55rem;
     }
 }

@@ -49,6 +49,7 @@ Welcome to my personal portfolio repository! This is a modern, fast, and fully r
 │   ├── image.jpg                # Profile pictures
 │   ├── movie.png                # Movie Search App screenshot
 │   ├── weather.png              # Weather App screenshot
+│   ├── gpt.png                  # ChatGPT Clone screenshot
 │   └── portfolio-preview.png    # Portfolio preview image
 ├── index.html                   # Main page layout & semantic structure
 ├── style.css                    # Custom styles (layout, dark/light themes, animations)
@@ -82,6 +83,8 @@ In addition to this portfolio, check out some of my key projects:
     *   *Description:* Real-time weather search app built with React, pulling from a weather API to display temperature, wind speed, humidity, and forecasts.
 *   **🎬 [Movie Search Engine App](https://github.com/Ayush15601/Movie_search_engine)**
     *   *Description:* A movie discovery dashboard utilizing React and the TMDB API to search for films, view trending lists, and check ratings/overviews.
+*   **🤖 [ChatGPT Clone](https://github.com/Ayush15601/chat-gpt-clone)**
+    *   *Description:* A responsive ChatGPT clone built with React providing real-time AI conversations.
 
 ---
 
