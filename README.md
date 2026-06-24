@@ -79,8 +79,8 @@ To run this project locally, follow these simple steps:
 
 In addition to this portfolio, check out some of my key projects:
 
-*   **🌤️ [Weather App](https://github.com/Ayush15601/Weather-app)**
-    *   *Description:* Real-time weather search app built with React, pulling from a weather API to display temperature, wind speed, humidity, and forecasts.
+*   **🌤️ [e-commerce_cart](https://github.com/Ayush15601/e-commerce_cart)**
+    *   *Description:* A responsive React-Redux e-commerce app featuring product search, cart quantity management, and a persistent dark/light theme toggle.
 *   **🎬 [Movie Search Engine App](https://github.com/Ayush15601/Movie_search_engine)**
     *   *Description:* A movie discovery dashboard utilizing React and the TMDB API to search for films, view trending lists, and check ratings/overviews.
 *   **🤖 [ChatGPT Clone](https://github.com/Ayush15601/chat-gpt-clone)**
