@@ -48,7 +48,7 @@ Welcome to my personal portfolio repository! This is a modern, fast, and fully r
 │   ├── favicon.png              # Site Favicon
 │   ├── image.jpg                # Profile pictures
 │   ├── movie.png                # Movie Search App screenshot
-│   ├── weather.png              # Weather App screenshot
+│   ├── e commerce.png           # E-Commerce Cart screenshot
 │   ├── gpt.png                  # ChatGPT Clone screenshot
 │   └── portfolio-preview.png    # Portfolio preview image
 ├── index.html                   # Main page layout & semantic structure

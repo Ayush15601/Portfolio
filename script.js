@@ -80,7 +80,7 @@ addEventListener("scroll", () => {
     // offsetTop: distance (in pixels) from the top edge of the element to the top edge of its parent.
     let top = sec.offsetTop - 125;
 
-    // offsrtHeight: total height of the element, including its content, padding, and borders, not margin
+    // offsetHeight: total height of the element, including its content, padding, and borders, not margin
     let height = sec.offsetHeight;
     let bottom = top + height;
 
