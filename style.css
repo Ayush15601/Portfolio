@@ -290,7 +290,7 @@ section {
     min-height: 19rem;
     width: 20rem;
     border-radius: 50%;
-    box-shadow: 0 0 50px white;
+    box-shadow: 0 0 50px var(--text);
 }
 
 .about-items {
@@ -365,7 +365,7 @@ section {
     background-color: var(--bg2);
     width: 22rem;
     min-height: 33rem;
-    row-gap: 1.2rem;
+    row-gap: 2rem;
 }
 
 .project-items img {
@@ -731,7 +731,8 @@ section {
         width: 100%;
     }
 
-    .about-image {
+    .image_container {
+        height: 20rem;
         margin: 11rem 0;
     }
 
