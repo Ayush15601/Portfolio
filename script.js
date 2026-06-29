@@ -2,38 +2,38 @@ let button = document.querySelector(".about-button");
 let text = document.querySelector(".about-span");
 let dots = document.querySelector(".about-dots");
 
-button.addEventListener("click", () => {
-  if (text.style.display === "") {
-    text.style.display = "inline";
-    dots.style.display = "none";
-    button.value = "Read Less";
-  } else {
-    text.style.display = "";
-    dots.style.display = "inline";
-    button.value = "Read More";
-  }
-});
+if (button) {
+  button.addEventListener("click", () => {
+    if (text.style.display === "") {
+      text.style.display = "inline";
+      dots.style.display = "none";
+      button.value = "Read Less";
+    } else {
+      text.style.display = "";
+      dots.style.display = "inline";
+      button.value = "Read More";
+    }
+  });
+}
 
 let form_button = document.querySelector(".contact-form");
 
-form_button.addEventListener("submit", (e) => {
+if (form_button) {
+  form_button.addEventListener("submit", (e) => {
 
-  // trim cleans the input by removing spaces, allow uers cant bypass it by adding spaces.
+    let email = document.querySelector(".email").value.trim();
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // put these two variable inside submit event listiner otherwise it reads only once.
-  let email = document.querySelector(".email").value.trim();
-  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.match(emailPattern)) {
+      alert("Enter a valid email");
 
-  if (!email.match(emailPattern)) {
-    alert("Enter a valid email");
+      e.preventDefault();
+      return;
+    }
 
-    // used to prevent browser refreshing when submitting form
-    e.preventDefault();
-    return;
-  }
-
-  alert("Message sent successfully!");
-});
+    alert("Message sent successfully!");
+  });
+}
 
 // Dark-ligh theme
 let themeToggle = document.querySelector("#theme-toggle");
@@ -41,25 +41,23 @@ let themeToggle = document.querySelector("#theme-toggle");
 // for saving
 if (themeToggle) {
   
-  // its a good practise write it
   let item = localStorage.getItem("theme");
 
   if (item === "light") {
-    document.body.classList.add("light-mode");
+    document.documentElement.classList.add("light-mode");
     themeToggle.classList.remove("bx-moon");
     themeToggle.classList.add("bx-sun");
   } else {
-    document.body.classList.remove("light-mode");
+    document.documentElement.classList.remove("light-mode");
     themeToggle.classList.remove("bx-sun");
     themeToggle.classList.add("bx-moon");
   }
 
-  // main
   themeToggle.addEventListener("click", () => {
-    let islight = document.body.classList.toggle("light-mode"); // toggle means: “Switch between two states.” if class exists → remove it if class does not exist → add it
+    let islight = document.documentElement.classList.toggle("light-mode");
 
     if (islight) {
-      localStorage.setItem("theme", "light"); // It stores data in the browser. Here: "theme" -> key  "light" -> value
+      localStorage.setItem("theme", "light");
       themeToggle.classList.remove("bx-moon");
       themeToggle.classList.add("bx-sun");
     } else {
@@ -102,14 +100,16 @@ addEventListener("scroll", () => {
 let menuIcons = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".header-items");
 
-menuIcons.addEventListener("click", () => {
-  menuIcons.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-});
+if (menuIcons) {
+  menuIcons.addEventListener("click", () => {
+    menuIcons.classList.toggle("bx-x");
+    navbar.classList.toggle("active");
+  });
+}
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    menuIcons.classList.remove("bx-x");
-    navbar.classList.remove("active");
+    if (menuIcons) menuIcons.classList.remove("bx-x");
+    if (navbar) navbar.classList.remove("active");
   });
 });

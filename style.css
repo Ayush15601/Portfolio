@@ -98,8 +98,9 @@ section {
     cursor: pointer;
     text-decoration: none;
     color: white;
-    border-bottom: 3px solid transparent;
+
     /* used to avoid header links flickering */
+    border-bottom: 3px solid transparent;
 }
 
 .header-items a:hover,
@@ -114,7 +115,7 @@ section {
 
 
 .home {
-    background: var(--bg);
+    background: var(--bg2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,7 +156,7 @@ section {
     top: 0;
     width: calc(100% + 8px);
     min-height: 100%;
-    background-color: var(--bg);
+    background-color: var(--bg2);
     border-left: 2px solid var(--main);
     animation: cursor 0.4s infinite, typing 20s steps(70) infinite;
 }
@@ -259,10 +260,13 @@ section {
 }
 
 .home-image {
-    min-height: 27rem;
-    width: 28rem;
-    border-radius: 50%;
+    height: 26rem;
+    width: 20rem;
+    object-fit: cover;
+    border-radius: 2rem;
+    border: 3px solid var(--text);
     box-shadow: 0 0 50px 5px var(--text);
+    transition: 0.3s ease;
 }
 
 
