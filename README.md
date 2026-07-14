@@ -7,8 +7,6 @@
 
 Welcome to my personal portfolio repository! This is a modern, fast, and fully responsive portfolio website designed to showcase my projects, technical skill set, and frontend development experience.
 
-✨ **[Live Demo](https://ayush15601.github.io/Portfolio/)**
-
 ---
 
 ## 📸 Preview
